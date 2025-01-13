@@ -40,16 +40,31 @@ sudo apt update
 sudo apt install git
 ```
 > 💡 **Tip:** To check if git is successfully installed, use `git --version`. It should show the installed version of git on your system.
-Run the following commands to set your name and email of your GitHub account:
+
+- Run the following commands to set your name and email of your GitHub account:
 ```
 git config --global user.name "Your Name" 
 git config --global user.email "your.email@example.com
 ```
 Once you've set your name and email globally using the git config --global command, Git will use those settings automatically for every project you work on, so you don't need to enter them every time you make a commit
 
-Run the following command to check if your Git Configuration was set correctly
+- Run the following command to check if your Git Configuration was set correctly
 ```
 git config --global --list
 ```
 If you see values like `user.name='your-name'` then the configurations were set correctly.
 
+## Clone a Git repository
+Cloning in Git refers to the process of copying a remote repository (often public) including its histories to your local machine. This allows you to work on the project locally, make changes, and commit those changes independently from the remote repository. However, the changes you make locally won't affect the remote repository unless you push your changes back to the remote.
+1. Clone the repo
+```
+git clone <repo-url>
+Example: git clone https://github.com/HKUDS/LightRAG.git
+```
+Repo-URL can be found from the repo's `code` dropdown
+![image](https://github.com/user-attachments/assets/4563f822-e997-40ca-add5-2b1e6c0db2f7)
+2. Navigating to the repo
+```
+cd <cloned-project-folder-name> // to go to the cloned repo
+code . // to open your repo in vs-code
+```
